@@ -1,5 +1,5 @@
 <template>
-        <v-main scrollable persistent width="450px" v-model="myValue">
+        <v-dialog scrollable persistent width="450px" v-model="myValue">
             <v-card>
                 <v-card-title>알림</v-card-title>
                 <v-card-text style="max-height: 200px">
@@ -10,7 +10,7 @@
                     <v-btn color="primary" @click="ok()">확인</v-btn>
                 </v-card-actions>
             </v-card>
-    </v-main>
+    </v-dialog>
 </template>
 <script>
 export default {
@@ -22,7 +22,7 @@ export default {
         },
         message: {
             type: String,
-            default: '머임ㅁㅁㅁㅁ',
+            default: '',
         },
         callback: {
             type: Function,

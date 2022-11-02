@@ -1,5 +1,5 @@
 <template>
-    <v-main scrollable persistent width="450px" v-model="myValue">
+    <v-dialog scrollable persistent width="450px" v-model="myValue">
         <v-card>
             <v-card-title>확인</v-card-title>
             <v-card-text style="max-height: 200px">
@@ -11,7 +11,7 @@
                 <v-btn color="secondary" @click="cancel()">{{ canceltext }}</v-btn>
             </v-card-actions>
         </v-card>
-    </v-main>
+    </v-dialog>
 </template>
 <script>
 export default {

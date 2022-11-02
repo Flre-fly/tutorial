@@ -5,32 +5,32 @@ Vue.use(Vuex);
 
 export const store = new Vuex.Store({
     state: {
-            token: 'asd',
-            user: null,
-            person: null,
-            roleList: null,
-            menuList: null,
-            treeMenuList: null,
-            alert: {
-                value: false,
-                message: 'sda',
-                callback: function () {},
-            },
-            confirm: {
-                value: false,
-                message: 'aaaa',
-                oktext: '확인',
-                canceltext: '취소',
-                callback: function () {},
-            },
-            showMenuPathName: 'dd',
-            loading: {
-                zIndex: 9999,
-                overlay: false,
-            },
+        token: 'asd',
+        user: null,
+        person: null,
+        roleList: null,
+        menuList: null,
+        treeMenuList: null,
+        alert: {
+            value: false,
+            message: '',
+            callback: function () {},
+        },
+        confirm: {
+            value: false,
+            message: '',
+            oktext: '확인',
+            canceltext: '취소',
+            callback: function () {},
+        },
+        showMenuPathName: 'dd',
+        loading: {
+            zIndex: 9999,
+            overlay: false,
+        },
     },
     getters: {
-        GET_TOKEN: () => 'ㄴㅁㅇ',
+        GET_TOKEN: (state) => state.token,
         GET_USER: (state) => state.user,
         GET_PERSON: (state) => state.person,
         GET_MENU_LIST: (state) => state.menuList,
